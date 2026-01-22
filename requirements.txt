@@ -1,0 +1,16 @@
+# Base dependencies for COCO-Spatial-Join-1B builder (torch/detectron2 installed separately)
+numpy>=1.24,<3
+pyarrow==16.1.0
+opencv-python-headless>=4.8
+tqdm>=4.66
+psutil>=5.9
+packaging>=23.0
+
+# Optional but recommended: faster COCO download via Hugging Face mirror.
+# `huggingface_hub` provides the `hf download` CLI. As of huggingface_hub>=0.32,
+# it can also use Xet storage (hf_xet) automatically when needed.
+huggingface_hub>=0.34.0
+
+# Optional accelerator for Hugging Face Hub downloads. Enable by setting
+# HF_HUB_ENABLE_HF_TRANSFER=1 (we do this by default when downloading COCO via HF).
+hf_transfer
