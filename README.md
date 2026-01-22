@@ -1,5 +1,4 @@
-# COCO‑Spatial‑Join‑1B One‑Stop Builder
-
+# How to use
 > This repo is an **end-to-end** builder for the dataset described in your build spec.
 >
 > ## Quick start
