@@ -1,4 +1,4 @@
-# How to use
+# How to Start
 > This repo is an **end-to-end** builder for the dataset described in your build spec.
 >
 > ## Quick start
