@@ -113,9 +113,11 @@
 > ### 1.1 Unified Object Representation: 3D Axis-Aligned Half-Open Box
 >
 > Each object is represented as a 3D half-open box:
+>
 > $$
 > b=[x_{\min},x_{\max})\times[y_{\min},y_{\max})\times[z_{\min},z_{\max})
 > $$
+>
 > and must satisfy:
 >
 > - $x_{\min }<x_{\max },\ y_{\min }<y_{\max },\ z_{\min }<z_{\max }$
@@ -134,6 +136,7 @@
 > ### 1.3 Intersection Test: Half-Open Semantics (Touching Boundaries Does Not Count as Intersecting)
 >
 > Two 3D boxes $b,b'$ intersect if and only if they strictly overlap on every dimension:
+>
 > $$
 > \max(L_i(b),L_i(b'))<\min(R_i(b),R_i(b')),\ \ i\in\{x,y,z\}
 > $$
@@ -268,9 +271,11 @@
 > - RPN returns `objectness_logits` (real-valued logits)
 >
 > - The stored `score` is defined as:
+>
 >   $$
 >   \text{score}=\sigma(\text{objectness\_logit})=\frac{1}{1+\exp(-\text{logit})}
 >   $$
+>
 >   and stored as **float32**, with value range $[0,1]$.
 >
 > #### 5.6.1 Sorting Key (Deterministic Total Order)
@@ -372,9 +377,11 @@
 > - File name format: `shard-{start_z_idx:06d}.parquet`
 >
 > - Each shard covers:
+>
 >   $$
 >   z\_idx \in [start\_z\_idx,\ \min(start\_z\_idx+1024,\ split\_end))
 >   $$
+>
 >   where `split_end` is the upper bound of the split (118287 for train, 123287 for val).
 >
 > ### 8.3 Row Order Within a Shard (Deterministic)
